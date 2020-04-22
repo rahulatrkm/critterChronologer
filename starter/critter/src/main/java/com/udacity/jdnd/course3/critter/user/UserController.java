@@ -2,7 +2,7 @@ package com.udacity.jdnd.course3.critter.user;
 
 import com.udacity.jdnd.course3.critter.entity.Customer;
 import com.udacity.jdnd.course3.critter.entity.Employee;
-import com.udacity.jdnd.course3.critter.pet.Pet;
+import com.udacity.jdnd.course3.critter.entity.Pet;
 import com.udacity.jdnd.course3.critter.service.CustomerService;
 import com.udacity.jdnd.course3.critter.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +57,7 @@ public class UserController {
 
     @GetMapping("/customer/pet/{petId}")
     public CustomerDTO getOwnerByPet(@PathVariable long petId){
-        return getCustomerDTO(customerService.getCustomerGetId(petId));
+        return getCustomerDTO(customerService.getCustomerByPetId(petId));
     }
 
     private EmployeeDTO getEmployeeDTO(Employee employee) {

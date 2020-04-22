@@ -1,6 +1,5 @@
 package com.udacity.jdnd.course3.critter.entity;
 
-import com.udacity.jdnd.course3.critter.pet.Pet;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,7 +12,6 @@ import java.util.List;
 @NoArgsConstructor
 @Table
 public class Customer implements Serializable {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

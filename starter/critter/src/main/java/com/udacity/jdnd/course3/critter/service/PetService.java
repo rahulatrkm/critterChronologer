@@ -1,7 +1,7 @@
 package com.udacity.jdnd.course3.critter.service;
 
 import com.udacity.jdnd.course3.critter.entity.Customer;
-import com.udacity.jdnd.course3.critter.pet.Pet;
+import com.udacity.jdnd.course3.critter.entity.Pet;
 import com.udacity.jdnd.course3.critter.repository.CustomersRepository;
 import com.udacity.jdnd.course3.critter.repository.PetsRepository;
 import org.springframework.beans.factory.annotation.Autowired;

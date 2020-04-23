@@ -26,7 +26,6 @@ public class ScheduleController {
         scheduleDTO.setId(schedule.getId());
         scheduleDTO.setEmployeeIds(schedule.getEmployees().stream().map(Employee::getId).collect(Collectors.toList()));
         scheduleDTO.setPetIds(schedule.getPets().stream().map(Pet::getId).collect(Collectors.toList()));
-        scheduleDTO.setDate(schedule.getDate());
         return scheduleDTO;
     }
 

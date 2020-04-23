@@ -32,8 +32,8 @@ public class UserController {
         CustomerDTO customerDTO = new CustomerDTO();
         customerDTO.setId(customer.getId());
         customerDTO.setName(customer.getName());
-        customerDTO.setNotes(customer.getNote());
-        customerDTO.setPhoneNumber(customer.getPhone());
+        customerDTO.setNotes(customer.getNotes());
+        customerDTO.setPhoneNumber(customer.getPhoneNumber());
         List<Long> petIds = customer.getPets().stream().map(Pet::getId).collect(Collectors.toList());
         customerDTO.setPetIds(petIds);
         return customerDTO;
@@ -43,8 +43,8 @@ public class UserController {
     public CustomerDTO saveCustomer(@RequestBody CustomerDTO customerDTO){
         Customer customer = new Customer();
         customer.setName(customerDTO.getName());
-        customer.setPhone(customerDTO.getPhoneNumber());
-        customer.setNote(customerDTO.getNotes());
+        customer.setPhoneNumber(customerDTO.getPhoneNumber());
+        customer.setNotes(customerDTO.getNotes());
         List<Long> petIds = customerDTO.getPetIds();
         return getCustomerDTO(customerService.saveCustomer(customer, petIds));
     }
@@ -62,7 +62,7 @@ public class UserController {
 
     private EmployeeDTO getEmployeeDTO(Employee employee) {
         EmployeeDTO employeeDTO = new EmployeeDTO();
-        employeeDTO.setDaysAvailable(employee.getAvailDay());
+        employeeDTO.setDaysAvailable(employee.getDaysAvailable());
         employeeDTO.setId(employee.getId());
         employeeDTO.setName(employee.getName());
         employeeDTO.setSkills(employee.getSkills());
@@ -73,7 +73,7 @@ public class UserController {
     public EmployeeDTO saveEmployee(@RequestBody EmployeeDTO employeeDTO) {
         Employee employee = new Employee();
         employee.setName(employeeDTO.getName());
-        employee.setAvailDay(employeeDTO.getDaysAvailable());
+        employee.setDaysAvailable(employeeDTO.getDaysAvailable());
         employee.setSkills(employeeDTO.getSkills());
         return getEmployeeDTO(employeeService.saveEmployee(employee));
     }

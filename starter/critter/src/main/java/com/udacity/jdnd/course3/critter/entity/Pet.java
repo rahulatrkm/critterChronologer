@@ -1,6 +1,5 @@
 package com.udacity.jdnd.course3.critter.entity;
 
-import com.udacity.jdnd.course3.critter.entity.Customer;
 import com.udacity.jdnd.course3.critter.pet.PetType;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,6 +21,6 @@ public class Pet implements Serializable {
 
     @ManyToOne(targetEntity = Customer.class, optional = false)
     private Customer customer;
-    private LocalDate dob;
-    private String note;
+    private LocalDate birthDate;
+    private String notes;
 }

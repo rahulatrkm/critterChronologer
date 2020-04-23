@@ -23,5 +23,5 @@ public class Employee implements Serializable {
     private Set<EmployeeSkill> skills;
 
     @ElementCollection
-    private Set<DayOfWeek> availDay;
+    private Set<DayOfWeek> daysAvailable;
 }

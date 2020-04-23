@@ -15,8 +15,8 @@ public class Customer implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String phone;
-    private String note;
+    private String phoneNumber;
+    private String notes;
     private String name;
 
     @OneToMany(targetEntity = Pet.class)

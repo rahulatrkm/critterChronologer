@@ -13,7 +13,6 @@ import java.util.Set;
 @Data
 @Entity
 @NoArgsConstructor
-@Table
 public class Schedule implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

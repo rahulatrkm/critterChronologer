@@ -10,7 +10,6 @@ import java.util.List;
 @Data
 @Entity
 @NoArgsConstructor
-@Table
 public class Customer implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

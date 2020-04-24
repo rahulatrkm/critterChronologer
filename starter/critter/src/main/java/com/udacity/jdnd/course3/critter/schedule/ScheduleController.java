@@ -7,6 +7,7 @@ import com.udacity.jdnd.course3.critter.service.SchedulesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -14,6 +15,7 @@ import java.util.stream.Collectors;
  * Handles web requests related to Schedules.
  */
 @RestController
+@Transactional
 @RequestMapping("/schedule")
 public class ScheduleController {
     @Autowired

@@ -11,7 +11,6 @@ import java.time.LocalDate;
 @Data
 @Entity
 @NoArgsConstructor
-@Table
 public class Pet implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
